@@ -20,6 +20,6 @@ app.use((err, req, res, next) => {
   handleError(err, res);
 });
 
-app.listen(3000, () => {
+app.listen(config.PORT, () => {
   console.log(`Listening on port ${config.PORT}`);
 });
