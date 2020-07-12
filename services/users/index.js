@@ -36,6 +36,7 @@ const getUser = async (user) => {
   return {
     message: "",
     token,
+    id: findUser._id,
   };
 };
 
