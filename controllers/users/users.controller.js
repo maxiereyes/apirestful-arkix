@@ -21,10 +21,11 @@ const createUsers = async (req, res, next) => {
 const getUsers = async (req, res, next) => {
   const user = req.body;
   try {
-    const { message, token } = await getUser(user);
+    const { message, token, id } = await getUser(user);
     res.status(200).json({
       message: "User login successfully",
       access_token: token,
+      userId: id,
     });
   } catch (error) {
     next(error);
